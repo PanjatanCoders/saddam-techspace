@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="icon.png ">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>Saddam Hossain - Technologist | Researcher | Educator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">SH.dev</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <canvas class="neural-network" id="neural-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm Saddam Hossain</h1>
+            <p class="hero-subtitle">Technologist | Researcher | Educator</p>
+            <div class="typewriter" id="typewriter"></div>
+            <div class="scroll-indicator" onclick="scrollToSection('about')">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="avatar-container">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>Welcome to my digital realm! I'm a passionate technologist with expertise in software testing, automation frameworks, and emerging technologies. My journey spans across manual testing, API automation, and cutting-edge framework development.</p>
+                <p>With a deep understanding of modern testing methodologies and a keen eye for innovation, I bridge the gap between traditional quality assurance and AI-driven testing solutions. I'm committed to sharing knowledge and pushing the boundaries of what's possible in tech education.</p>
+            </div>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-name">Manual Testing</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Java Programming</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Selenium WebDriver</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 92%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">API Automation</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">Framework Design</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-name">AI & Machine Learning</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <h2 class="section-title">Portfolio & Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" onclick="openModal('project1')">
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI-Powered Test Automation Framework</h3>
+                    <p class="project-description">Revolutionary testing framework that leverages machine learning for intelligent test case generation and self-healing automation scripts.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">AI/ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('project2')">
+                <div class="project-image">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cucumber BDD Framework</h3>
+                    <p class="project-description">Comprehensive BDD framework with Page Object Model implementation, supporting multiple browsers and parallel execution.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Cucumber</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Maven</span>
+                        <span class="tech-tag">Jenkins</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('project3')">
+                <div class="project-image">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Data-Driven Testing Suite</h3>
+                    <p class="project-description">Advanced data-driven testing framework with Excel/CSV integration, dynamic test generation, and comprehensive reporting.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Apache POI</span>
+                        <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">ExtentReports</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('project4')">
+                <div class="project-image">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">API Testing Framework</h3>
+                    <p class="project-description">RESTful API testing framework with authentication handling, schema validation, and performance testing capabilities.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">REST Assured</span>
+                        <span class="tech-tag">JSON Schema</span>
+                        <span class="tech-tag">OAuth 2.0</span>
+                        <span class="tech-tag">Postman</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('project5')">
+                <div class="project-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Mobile Test Automation</h3>
+                    <p class="project-description">Cross-platform mobile testing solution supporting both Android and iOS applications with device farm integration.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Appium</span>
+                        <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">Device Farm</span>
+                        <span class="tech-tag">XCUITest</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('project6')">
+                <div class="project-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Performance Testing Dashboard</h3>
+                    <p class="project-description">Real-time performance monitoring dashboard with automated load testing and detailed analytics visualization.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JMeter</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">InfluxDB</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <h2 class="section-title">Research Work</h2>
+        <div class="research-timeline">
+            <div class="timeline-line"></div>
+            
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="research-date">2024</div>
+                    <h3 class="research-title">AI-Driven Test Case Optimization</h3>
+                    <p class="research-description">Published research on machine learning algorithms for automated test case prioritization and optimization, reducing testing time by 40% while maintaining coverage quality.</p>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="research-date">2023</div>
+                    <h3 class="research-title">Self-Healing Automation Framework</h3>
+                    <p class="research-description">Developed innovative self-healing mechanisms for web automation that automatically adapt to UI changes, published in International Journal of Software Testing.</p>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="research-date">2023</div>
+                    <h3 class="research-title">Performance Testing in Cloud Environments</h3>
+                    <p class="research-description">Comprehensive study on scalable performance testing strategies for cloud-native applications, focusing on containerized environments and microservices architecture.</p>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="research-date">2022</div>
+                    <h3 class="research-title">API Security Testing Methodologies</h3>
+                    <p class="research-description">Research on automated security testing approaches for RESTful APIs, including vulnerability detection and penetration testing automation.</p>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="research-content">
+                    <div class="research-date">2022</div>
+                    <h3 class="research-title">Cross-Browser Compatibility Framework</h3>
+                    <p class="research-description">Developed a novel approach to cross-browser testing automation with intelligent browser selection and parallel execution optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section class="section" id="teaching">
+        <h2 class="section-title">Teaching & Courses</h2>
+        <div class="teaching-grid">
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fas fa-hand-point-up"></i>
+                </div>
+                <h3 class="course-title">Manual Testing Mastery</h3>
+                <p class="course-description">Comprehensive manual testing course covering test planning, execution, and defect management with real-world projects.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">Test Planning</span>
+                    <span class="topic-tag">Test Cases</span>
+                    <span class="topic-tag">Bug Reporting</span>
+                    <span class="topic-tag">SDLC</span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fab fa-java"></i>
+                </div>
+                <h3 class="course-title">Java for Testers</h3>
+                <p class="course-description">Java programming fundamentals specifically designed for testing professionals, focusing on automation prerequisites.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">OOP Concepts</span>
+                    <span class="topic-tag">Collections</span>
+                    <span class="topic-tag">Exception Handling</span>
+                    <span class="topic-tag">File I/O</span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3 class="course-title">Selenium WebDriver</h3>
+                <p class="course-description">Advanced Selenium automation course with hands-on projects, covering web element interactions and framework development.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">WebDriver API</span>
+                    <span class="topic-tag">Page Factory</span>
+                    <span class="topic-tag">Waits</span>
+                    <span class="topic-tag">Actions Class</span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3 class="course-title">API Automation</h3>
+                <p class="course-description">Complete API testing automation using REST Assured, covering authentication, validation, and performance testing.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">REST Assured</span>
+                    <span class="topic-tag">JSON/XML</span>
+                    <span class="topic-tag">Authentication</span>
+                    <span class="topic-tag">Response Validation</span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
+                <h3 class="course-title">Framework Design</h3>
+                <p class="course-description">Master the art of building robust test automation frameworks from scratch with industry best practices.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">Page Object Model</span>
+                    <span class="topic-tag">Data Driven</span>
+                    <span class="topic-tag">Keyword Driven</span>
+                    <span class="topic-tag">Hybrid Framework</span>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-icon">
+                    <i class="fas fa-cucumber"></i>
+                </div>
+                <h3 class="course-title">Cucumber BDD</h3>
+                <p class="course-description">Behavior-driven development with Cucumber, focusing on feature files, step definitions, and reporting.</p>
+                <div class="course-topics">
+                    <span class="topic-tag">Gherkin</span>
+                    <span class="topic-tag">Step Definitions</span>
+                    <span class="topic-tag">Hooks</span>
+                    <span class="topic-tag">Data Tables</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <h2 class="section-title">Blog & Articles</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">The Future of AI in Software Testing</h3>
+                    <p class="blog-excerpt">Exploring how artificial intelligence is revolutionizing the software testing landscape and what it means for testing professionals.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">AI</span>
+                        <span class="blog-tag">Testing</span>
+                        <span class="blog-tag">Automation</span>
+                    </div>
+                    <div class="blog-date">July 15, 2024</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Building Scalable Test Automation Frameworks</h3>
+                    <p class="blog-excerpt">A comprehensive guide to designing and implementing test automation frameworks that can scale with your project's growth.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Framework</span>
+                        <span class="blog-tag">Scalability</span>
+                        <span class="blog-tag">Best Practices</span>
+                    </div>
+                    <div class="blog-date">June 28, 2024</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">API Security Testing: A Modern Approach</h3>
+                    <p class="blog-excerpt">Discover advanced techniques for automated API security testing and vulnerability detection in modern applications.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">API</span>
+                        <span class="blog-tag">Security</span>
+                        <span class="blog-tag">Vulnerability</span>
+                    </div>
+                    <div class="blog-date">June 10, 2024</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Cloud-Native Testing Strategies</h3>
+                    <p class="blog-excerpt">Understanding the unique challenges and opportunities of testing cloud-native applications and microservices.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Cloud</span>
+                        <span class="blog-tag">Microservices</span>
+                        <span class="blog-tag">DevOps</span>
+                    </div>
+                    <div class="blog-date">May 22, 2024</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Mobile Test Automation Best Practices</h3>
+                    <p class="blog-excerpt">Essential strategies for effective mobile application testing across different devices and platforms.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Mobile</span>
+                        <span class="blog-tag">Appium</span>
+                        <span class="blog-tag">Cross-Platform</span>
+                    </div>
+                    <div class="blog-date">May 8, 2024</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-header">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">Performance Testing in the Age of DevOps</h3>
+                    <p class="blog-excerpt">Integrating performance testing into CI/CD pipelines and embracing shift-left testing methodologies.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">Performance</span>
+                        <span class="blog-tag">DevOps</span>
+                        <span class="blog-tag">CI/CD</span>
+                    </div>
+                    <div class="blog-date">April 25, 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">Let's Connect</h3>
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">Ready to collaborate on exciting projects or discuss the latest in testing and automation? I'd love to hear from you!</p>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-envelope" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                    <span>mdsddmhossain786@gmail.com</span>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-phone" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                    <span>+91 70304 00093</span>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--neon-cyan); margin-right: 1rem;"></i>
+                    <span>Pune, Maharashtra, India</span>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/hossain-mdsaddam/" class="social-link" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/PanjatanCoders" class="social-link" title="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@TechTok-Cafe" class="social-link" title="YouTube" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/Saddy000786" class="social-link" title="Twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="color: var(--neon-pink); margin-bottom: 1rem;">Send Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Mohammad Saddam Hossain. All rights reserved.</p>
+            <p class="version">Portfolio v2.1.0 | Built with ❤️ and AI</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
